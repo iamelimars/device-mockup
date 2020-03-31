@@ -12,13 +12,32 @@ const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
 `;
+const AssetsContainer = styled.div`
+  width: 100vw;
+  height: auto;
+  background: #181818;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  img {
+    height: 300px;
+    width: auto;
+  }
+`;
 
 const App = () => {
   return (
-    <Container>
-      <Ios image={PhoneImage} />
-      <Android image={AndroidImage} />
-    </Container>
+    <>
+      <Container>
+        <Ios image={PhoneImage} />
+        <Android image={AndroidImage} />
+      </Container>
+      <AssetsContainer>
+        <img src={PhoneImage} alt="" />
+        <img src={AndroidImage} alt="" />
+      </AssetsContainer>
+    </>
   );
 };
 
