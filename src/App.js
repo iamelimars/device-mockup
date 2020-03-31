@@ -6,38 +6,28 @@ import AndroidImage from "./Courses.png";
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
-  background: #181818;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-`;
-const AssetsContainer = styled.div`
-  width: 100vw;
-  height: auto;
-  background: #181818;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  height: 100%;
 
-  img {
-    height: 300px;
-    width: auto;
-  }
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+const Img = styled.img`
+  height: 300px;
+  width: auto;
 `;
 
 const App = () => {
   return (
-    <>
-      <Container>
-        <Ios image={PhoneImage} />
-        <Android image={AndroidImage} />
-      </Container>
-      <AssetsContainer>
-        <img src={PhoneImage} alt="" />
-        <img src={AndroidImage} alt="" />
-      </AssetsContainer>
-    </>
+    <Container>
+      <Ios
+        image={"https://device-mockup.now.sh/static/media/Courses.6246d440.png"}
+      />
+      <Android image={AndroidImage} />
+      <Img src={PhoneImage} />
+      <Img src={AndroidImage} />
+    </Container>
   );
 };
 
